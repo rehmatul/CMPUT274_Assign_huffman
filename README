@@ -1,0 +1,22 @@
+# ---------------------------------------------------
+#    Name: FATIMA REHMATULLAH
+#    ID: 1631703
+#    CMPUT 274, Fall  2020
+#    Assignment 2: Huffman Coding
+# --------------------------------------------------
+
+   Files included:
+1) util.py
+2) README
+
+   Notes: 
+
+The file moneybags.py contains four functions inputfunction(), resultlist(),printingresult() and testmain(). 
+
+*  The input function takes in no arguments but instead takes an integer value-n from the user. Then allows the user to enter n integer values. Each one of these values is the net worth of each of the applicants. This function makes a list of all the values and returns the list.
+
+*  The resultlist function finds a list of minimum n(s) which posses a certain value of w million dollars. The use of a single while loop with the built in sorted function increases efficiency of the code. The Big O notation of the function is O(nlogn) which makes it ideal to use in this program. This function takes the input list as a parameter and returns the result list.
+
+* The printing result function loops over the result list passed into it as a parameter and makes a list of all the values of w that atleast n people possess (where n is greater than w). It then prints the maximum value as output which corresponds to the minimum wealth threshold for applicants of the club. This function takes the results list as a parameter and returns nothing. Instead, the function prints the integer output-N.
+
+* The testmain function is invoked whenever the program is run. It calls all the relevant functions in their respective orders. 
