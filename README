@@ -1,22 +1,21 @@
-# ---------------------------------------------------
-#    Name: FATIMA REHMATULLAH
-#    ID: 1631703
-#    CMPUT 274, Fall  2020
-#    Assignment 2: Huffman Coding
-# --------------------------------------------------
+HUFFMAN ASSIGNMENT: NEW VERSION FOR FALL 2020
 
-   Files included:
-1) util.py
-2) README
+STUDENTS SHOULD REPLACE THIS README WITH THEIR OWN
 
-   Notes: 
+Included Files:
+- Makefile: automatically start web server, various tests
+- bitio.py: Contains the classs BitWriter and BitReader
+- compress.py: Runs the code to compress a file.
+- decompress.py: Runs the code to decompress a file.
+- huffman.py: Used to create huffman trees as well as encode and decode messages.
+- webserver.py: The file that allows viewing of the compressed files as they are being sent to the web browser
+- test.1.txt, arrow.png, oval.png: various test files that should compress
+- wwwroot directory: contains compressed versions of the webpage (index.html.huf) and the image of Huffman (huffman.bmp.huf)
 
-The file moneybags.py contains four functions inputfunction(), resultlist(),printingresult() and testmain(). 
+Modified Files:
+- util.py: Contains the five functions read_tree(), decode_byte(), write_tree(), compress(), and decompress() which students must implement.
 
-*  The input function takes in no arguments but instead takes an integer value-n from the user. Then allows the user to enter n integer values. Each one of these values is the net worth of each of the applicants. This function makes a list of all the values and returns the list.
+Running the code:
+Go to the wwwroot directory. Open a bash terminal and open the web server using "python3 ../webserver.py". You can then go to the url "http://localhost:8000" to view the webpage and image of Huffman that will appear if the decompressor is functioning properly. Note that the port can be changed by modifying the variable port in webserver.py.
 
-*  The resultlist function finds a list of minimum n(s) which posses a certain value of w million dollars. The use of a single while loop with the built in sorted function increases efficiency of the code. The Big O notation of the function is O(nlogn) which makes it ideal to use in this program. This function takes the input list as a parameter and returns the result list.
-
-* The printing result function loops over the result list passed into it as a parameter and makes a list of all the values of w that atleast n people possess (where n is greater than w). It then prints the maximum value as output which corresponds to the minimum wealth threshold for applicants of the club. This function takes the results list as a parameter and returns nothing. Instead, the function prints the integer output-N.
-
-* The testmain function is invoked whenever the program is run. It calls all the relevant functions in their respective orders. 
+To compress a file, first copy that file over to the wwwroot directory and then move to that directory and type "python3 ../compress.py somefile.ext" where somefile is the name of the file you wish to compress and ext is the extension. Then go to the url "http://localhost:8000/somefile.ext" to view and/or download the decompressed file.
